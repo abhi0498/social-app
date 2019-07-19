@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+
+{% block head %}
+<title>Signup</title>
+{% endblock %}
+{% block body %}
+<div class="container mt-2">
+    <h2>Sign Up</h2>
+    <div class="shadow container resize">
+        <form action="/signup" method="POST" onsubmit="checkpass(this)">
+            <div class="form-group">
+                <label for="UserId">User ID</label>
+                <input type="text" class="form-control" name="UserId" id="UserId" aria-describedby="s"
+                    placeholder="Enter User ID" required>
+                {% if match %}
+
+                <p style="color: red">User exists</p>
+
+                {% endif %}
+
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" name="Password" id="Password" placeholder="Password"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="CPassword">Confirm Password</label>
+                <input type="password" class="form-control" name="CPassword" id="CPassword" placeholder="Password"
+                    required>
+                <div class="disp" style="display: none">
+                    <p>Passwords do not match</p>
+                </div>
+            </div>
+            <center>
+                <button type="submit" class="btn btn-primary center">Sign Up</button>
+            </center>
+        </form>
+        <a class="signup" href="/">Already have an account? Click here to login!!</a>
+
+    </div>
+</div>
+
+{% endblock %}

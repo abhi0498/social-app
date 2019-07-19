@@ -1,0 +1,24 @@
+.nav-bg{
+    background-color: purple;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    background-color: purple;
+
+}
+
+.resize{
+    border: 0px solid purple;
+    border-left-width: 8px;
+    padding-top: 3em;
+    width: 40em;
+    height: 25em;
+}
+
+.signup{
+    position: relative;
+    top: 0%;
+}
